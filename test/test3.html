@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="boost.js" namespace="boost" baseon="resources/javascript" version="" version_uri=".ver"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+
+boost(["module3","module1","module2"],function(module3,module1,module2){
+
+	console.log("hi",module1.Hello,module2.World);
+	boost(["module1","module2"],function(module1,module2){
+	console.log("hi2",module1.Hello,module2.World);
+	boost(["module1","module2"],function(module1,module2){
+	console.log("hi3",module1.Hello,module2.World);
+
+	boost(["module3"],function(module3){
+	console.log("hi3",module3.World);
+
+	boost(["module5.html"],function(module5){
+	console.log("module5.html",module5());
+	
+});
+});
+});
+});
+
+});
+
+
+</script>
+</head>
+<body scroll="no" style="width:100%;height:100%;overflow:hidden;">
+	
+</body>
+</html>
